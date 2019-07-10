@@ -12,5 +12,37 @@
       <h1>goTrip</h1>
     </div>
   </header>
+  <div class="citySearch">
+  <div id="controls">
+    <span>Select a Country:</span>
+    <select id="country">
+      <option value="all">All</option>
+      <option value="au">Australia</option>
+      <option value="br">Brazil</option>
+      <option value="ca">Canada</option>
+      <option value="fr">France</option>
+      <option value="de">Germany</option>
+      <option value="mx">Mexico</option>
+      <option value="nz">New Zealand</option>
+      <option value="it">Italy</option>
+      <option value="za">South Africa</option>
+      <option value="es">Spain</option>
+      <option value="pt">Portugal</option>
+      <option value="us">U.S.A.</option>
+      <option value="uk">United Kingdom</option>
+      <option value="ie" selected>Ireland</option>
+    </select>
+    </div>
+    <div id="findCities"></div>
+    <div id="locationField">
+      <span>Select a City:</span>
+      <input id="autocomplete" placeholder="Enter a city" type="text" />
+    </div>
+  </div>
+  <div id="searchSelected" onclick="search()">
+    <label><input type="radio" name="search" value= 'lodging' checked="checked">Places to stay!</label>
+    <label><input type="radio" name="search" value='restaurant'; 'meal_delivery'; 'meal_takeaway'; 'bar'; 'cafe'>Eating & Drinking!</label>
+    <label><input type="radio" name="search" value='museum'; 'spa'; 'zoo'; 'shopping_mall'; 'night_club'; 'movie_theater'>Things to DO!</label>
+  </div>
 </body>
 </html>

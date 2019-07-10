@@ -9,17 +9,121 @@ body {
 /************** header **************/
 header {
   width: 100%;
-  height: 20%;
+  height: 50%;
 }
 /* logo */
 #logo {
-  position: absolute;
-  top: 0;
-  left: 0;
   background-color: #000;
   color: #fff;
-  width: 100%;
+  width: 30%;
+  height: 30%;
+  margin: auto;
+  border-radius: 100%;
 }
 #logo h1 {
   text-align: center;
+}
+/************** Buttons **************/
+/* search box wrapper*/
+.citySearch {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  width: 100%;
+  height: 40%;
+  background-color: #BC2525;
+}
+#findCities {
+  font-size: 14px;
+}
+/* Select dropdown menu */
+#controls {
+  -webkit-box-flex: 1 1 190px;
+  -ms-flex: 1 1 190px;
+  flex: 1 1 190px;
+  margin: 30px 0 0 0;
+}
+#country{
+  width: 100%;
+  height: 3em;
+}
+/* For city search */
+#locationField {
+  -webkit-box-flex: 1 1 190px;
+  -ms-flex: 1 1 190px;
+  flex: 1 1 190px;
+  margin: 0 8px;
+}
+#locationField input {
+    width: 100%;
+    margin-bottom: 20px;
+    height: 3em;
+}
+#country,
+#locationField input{
+  padding: 10px;
+  box-sizing: border-box;
+  background: rgba(0,0,0,0.6);
+  border: 1px solid #fff;
+  border-radius: 10px;
+  color: #fff;
+  outline: none;
+  font-size: 14px;
+}
+/* Radio buttons */
+#searchSelected {
+  display: flex;
+  flex-direction: column;
+  background-color: #7B7979;
+  width: 100%;
+}
+#searchSelected label{
+  text-align: center;
+  color: #fff;
+  padding: 30px 10px;
+  border-bottom: 1px solid #000;
+}
+#searchSelected label:hover{
+  background-color: brown;
+  cursor: pointer;
+}
+#searchSelected input {
+  position: absolute;
+  left: 10%;
+}
+/*--------------------------------------------Media Queries*/
+@media(min-width: 992px) {
+  .citySearch {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 30%;
+  }
+  .citySearch div {
+    flex-basis: 40%;
+  }
+  /* Radio buttons */
+  #searchSelected {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  #searchSelected label{
+    padding: 30px;
+    border-right: 1px solid #000;
+    flex-basis: 30%;
+  }
+  #searchSelected label:hover{
+    background-color: brown;
+    cursor: pointer;
+  }
+  #searchSelected input {
+  position: inherit;
+  margin-right: 10px;
+  }
 }
