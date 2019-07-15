@@ -55,7 +55,8 @@ header {
   align-items: center;
   width: 100%;
   height: 30%;
-  background-color: #BC2525;
+  background-color: #0184AB;
+  color: #fff;
 }
 #findCities {
   font-size: 14px;
@@ -104,24 +105,28 @@ header {
 #searchSelected {
   display: flex;
   flex-direction: column;
-  background-color: #7B7979;
+  background-color: #E0F2F7;
   width: 100%;
 }
 #searchSelected label{
   text-align: center;
-  color: #fff;
+  color: #000;
   padding: 30px 10px;
   border-bottom: 1px solid #000;
+  flex-basis: 30%;
+}
+#searchSelected label:first-child{
+  border-top: 1px solid #000;
 }
 #searchSelected label:hover{
-  background-color: brown;
+  background-color: #AA924F;
+  color: #fff;
   cursor: pointer;
 }
 #searchSelected input {
   position: absolute;
-  left: 10%;
+  left: 30%;
 }
-
 /************** google map places and results style **************/
     #map {
       height: 100%;
@@ -187,15 +192,13 @@ header {
     flex-direction: row;
     justify-content: center;
   }
-  #controls {
+  #controls,
+  #locationField {
     margin-top: 0;
   }
   #controls,
   #locationField {
-  margin: 10px 5em;
-  }
-  #locationField {
-    margin-top: 0;
+  margin: 10px 7em;
   }
   /* Radio buttons */
   #searchSelected {
@@ -206,14 +209,13 @@ header {
   #searchSelected label{
     padding: 30px;
     border-right: 1px solid #000;
-    flex-basis: 30%;
-  }
-  #searchSelected label:hover{
-    background-color: brown;
-    cursor: pointer;
+    border-top: 1px solid #000;
   }
   #searchSelected input {
   position: inherit;
   margin-right: 10px;
+  }
+  #searchSelected label:last-child {
+    border-right: none;
   }
 }
