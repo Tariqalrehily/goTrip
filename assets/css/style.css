@@ -10,32 +10,51 @@ body {
 header {
   width: 100%;
   height: 50%;
+  background-image: url('../../assets/images/goTrip.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
 /* logo */
 #logo {
-  background-color: #000;
-  color: #fff;
-  width: 30%;
-  height: 30%;
-  margin: auto;
-  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+#logo h1,
+#logo p {
+  text-align: center;
+  color: #664905;
 }
 #logo h1 {
-  text-align: center;
+  border-radius: 50%;
+  padding: 20px;
+  width: 100px;
+  height: 45px;
+  margin: auto;
+  border: 1px solid #664905;
+  background-color: #fff;
 }
+#logo p {
+  font-weight: 400;
+  font-size: 16px;
+  font-family: fantasy;
+}
+/* Wrapper */
 /************** Buttons **************/
 /* search box wrapper*/
 .citySearch {
   -webkit-box-align: center;
   -ms-flex-align: center;
-  background: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   flex-direction: column;
-  align-items:center;
+  align-items: center;
   width: 100%;
-  height: 40%;
+  height: 30%;
   background-color: #BC2525;
 }
 #findCities {
@@ -43,28 +62,34 @@ header {
 }
 /* Select dropdown menu */
 #controls {
-  -webkit-box-flex: 1 1 190px;
-  -ms-flex: 1 1 190px;
-  flex: 1 1 190px;
-  margin: 30px 0 0 0;
+  -webkit-box-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  margin-top: 16px;
 }
 #country{
   width: 100%;
   height: 3em;
+  padding: 10px;
+  box-sizing: border-box;
+  background: rgba(0,0,0,0.6);
+  border: 1px solid #fff;
+  border-radius: 10px;
+  color: #fff;
+  outline: none;
+  font-size: 14px;
+}
+#country,
+#locationField input{
+  margin-top: 5px;
 }
 /* For city search */
 #locationField {
   -webkit-box-flex: 1 1 190px;
   -ms-flex: 1 1 190px;
   flex: 1 1 190px;
-  margin: 0 8px;
+  margin-top: 20px;
 }
-#locationField input {
-    width: 100%;
-    margin-bottom: 20px;
-    height: 3em;
-}
-#country,
 #locationField input{
   padding: 10px;
   box-sizing: border-box;
@@ -96,18 +121,25 @@ header {
   position: absolute;
   left: 10%;
 }
+
 /************** google map places and results style **************/
     #map {
       height: 100%;
+      width: 100%;
+      margin: auto;
+    }
+    .results{
+      text-align: center;
+      font-size: 18px;
+      font-family: cursive;
+      font-weight: 400;
+      background-color: red;
     }
     table {
       font-size: 12px;
     }
-    #map {
-      width: 100%;
-    }
     #listing {
-      width: 50%;
+      width: 100%;
       height: 470px;
       overflow: auto;
       cursor: pointer;
@@ -146,14 +178,24 @@ header {
     }
 /*--------------------------------------------Media Queries*/
 @media(min-width: 992px) {
+  body {
+    max-width: 1200px;
+    margin: auto;
+  }
   .citySearch {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    height: 30%;
+    justify-content: center;
   }
-  .citySearch div {
-    flex-basis: 40%;
+  #controls {
+    margin-top: 0;
+  }
+  #controls,
+  #locationField {
+  margin: 10px 5em;
+  }
+  #locationField {
+    margin-top: 0;
   }
   /* Radio buttons */
   #searchSelected {
