@@ -96,6 +96,54 @@ header {
   position: absolute;
   left: 10%;
 }
+/************** google map places and results style **************/
+    #map {
+      height: 100%;
+    }
+    table {
+      font-size: 12px;
+    }
+    #map {
+      width: 100%;
+    }
+    #listing {
+      width: 50%;
+      height: 470px;
+      overflow: auto;
+      cursor: pointer;
+      overflow-x: hidden;
+      margin: auto;
+    }
+    #autocomplete {
+      width: 100%;
+    }
+    .placeIcon {
+      width: 20px;
+      height: 34px;
+      margin: 4px;
+    }
+    .placeIcon {
+      width: 24px;
+      height: 24px;
+    }
+    #resultsTable {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    #rating {
+      font-size: 13px;
+      font-family: Arial Unicode MS;
+    }
+    .iw_table_row {
+      height: 18px;
+    }
+    .iw_attribute_name {
+      font-weight: bold;
+      text-align: right;
+    }
+    .iw_table_icon {
+      text-align: right;
+    }
 /*--------------------------------------------Media Queries*/
 @media(min-width: 992px) {
   .citySearch {
