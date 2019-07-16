@@ -128,63 +128,82 @@ header {
   left: 30%;
 }
 /************** google map places and results style **************/
-    #map {
-      height: 100%;
-      width: 100%;
-      margin: auto;
-    }
-    .results{
-      text-align: center;
-      font-size: 18px;
-      font-family: cursive;
-      font-weight: 400;
-      background-color: red;
-    }
-    table {
-      font-size: 12px;
-    }
-    #listing {
-      width: 100%;
-      height: 470px;
-      overflow: auto;
-      cursor: pointer;
-      overflow-x: hidden;
-      margin: auto;
-    }
-    #autocomplete {
-      width: 100%;
-    }
-    .placeIcon {
-      width: 20px;
-      height: 34px;
-      margin: 4px;
-    }
-    .placeIcon {
-      width: 24px;
-      height: 24px;
-    }
-    #resultsTable {
-      border-collapse: collapse;
-      width: 100%;
-    }
-    #rating {
-      font-size: 13px;
-      font-family: Arial Unicode MS;
-    }
-    .iw_table_row {
-      height: 18px;
-    }
-    .iw_attribute_name {
-      font-weight: bold;
-      text-align: right;
-    }
-    .iw_table_icon {
-      text-align: right;
-    }
+#map {
+  height: 80%;
+  width: 100%;
+  margin: auto;
+}
+.results{
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  font-family: cursive;
+  font-weight: 400;
+  background-color: #81853B;
+  margin: 0;
+  padding: 10px 5px;
+  color: #fff;
+}
+#resultsTable {
+  font-size: 14px;
+}
+#info-content table tr:hover,
+#results td:hover  {
+  background-color: #C1C8D3;
+}
+#results td {
+  padding: 0 10px;
+}
+#listing {
+  width: 100%;
+  height: 80%;
+  overflow: auto;
+  cursor: pointer;
+  overflow-x: hidden;
+  margin: auto;
+  background-color: #F2F2F2;
+}
+#autocomplete {
+  width: 100%;
+}
+.placeIcon {
+  width: 20px;
+  height: 34px;
+  margin: 4px;
+}
+.placeIcon {
+  width: 24px;
+  height: 24px;
+  padding: 5px;
+}
+#resultsTable {
+  border-collapse: collapse;
+  width: 100%;
+}
+#rating {
+  font-size: 13px;
+  font-family: Arial Unicode MS;
+}
+.iw_table_row {
+  height: 18px;
+  color: #000;
+}
+.iw_attribute_name {
+  font-weight: bold;
+  text-align: right;
+  color: #0648B0;
+}
+.iw_table_icon {
+  text-align: right;
+}
+tr {
+  background-color: #E2E9F4;
+  line-height: 1.2em;
+}
 /*--------------------------------------------Media Queries*/
 @media(min-width: 992px) {
   body {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: auto;
   }
   .citySearch {
@@ -202,9 +221,7 @@ header {
   }
   /* Radio buttons */
   #searchSelected {
-    display: flex;
     flex-direction: row;
-    justify-content: space-around;
   }
   #searchSelected label{
     padding: 30px;
@@ -217,5 +234,14 @@ header {
   }
   #searchSelected label:last-child {
     border-right: none;
+  }
+  #map {
+    float: left;
+    width: 70%;
+    margin-left: 0;
+  }
+  #listing{
+    float: right;
+    width: 30%;
   }
 }
