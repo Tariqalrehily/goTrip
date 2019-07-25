@@ -60,11 +60,7 @@ html, body {
 body {
   padding: 0 !important;
 }
-<<<<<<< HEAD
 /*--------------------------------------------Header*/
-=======
-/*--------------------------------------------Heading*/
->>>>>>> 422ea75a8d1a2bace6beb24ba3c707779b031083
 header {
   width: 100%;
   height: 50%;
@@ -100,7 +96,6 @@ header {
 }
 
 /*--------------------------------------------Search and Buttons*/
-
 /* search box wrapper*/
 .citySearch {
   -webkit-box-align: center;
@@ -163,9 +158,7 @@ header {
   position: inherit;
   margin-right: 10px;
 }
-
 /*--------------------------------------------Map and Search results*/
-
 #map {
   height: 80%;
   width: 100%;
