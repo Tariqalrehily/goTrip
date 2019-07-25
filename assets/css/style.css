@@ -1,3 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700');
+
+/*--------------------------------------------Colors*/
+#logo h1,
+#logo p {
+  color: #664905;
+}
+#logo h1 {
+  background-color: #fff;
+}
+#country,
+#locationField input,
+#footer span,
+.results,
+.citySearch  {
+  color: #fff;
+}
+.citySearch {
+  background-color: #0184AB;
+}
+#searchSelected {
+  background-color: #E0F2F7;
+}
+.results {
+  background-color: #81853B;
+}
+#searchSelected label,
+.iw_table_row {
+  color: #000;
+}
+#listing {
+  background-color: #F2F2F2;
+}
+.iw_attribute_name {
+  color: #0648B0;
+}
+tr {
+  background-color: #E2E9F4;
+}
+#footer {
+  background-color: #284F87;
+}
+
+/*--------------------------------------------Hover*/
+#searchSelected label:hover{
+  background-color: #1F2A39;
+  color: #fff;
+  cursor: pointer;
+}
+#info-content table tr:hover,
+#results td:hover  {
+  background-color: #C1C8D3;
+}
+/*--------------------------------------------Body*/
 html, body {
   height: 100%;
   margin: 0;
@@ -6,7 +60,7 @@ html, body {
 body {
   padding: 0 !important;
 }
-/************** header **************/
+/*--------------------------------------------Header*/
 header {
   width: 100%;
   height: 50%;
@@ -26,7 +80,6 @@ header {
 #logo h1,
 #logo p {
   text-align: center;
-  color: #664905;
 }
 #logo h1 {
   border-radius: 50%;
@@ -35,15 +88,14 @@ header {
   height: 45px;
   margin: auto;
   border: 1px solid #664905;
-  background-color: #fff;
 }
 #logo p {
   font-weight: 400;
   font-size: 16px;
   font-family: fantasy;
 }
-/* Wrapper */
-/************** Buttons **************/
+
+/*--------------------------------------------Search and Buttons*/
 /* search box wrapper*/
 .citySearch {
   -webkit-box-align: center;
@@ -54,8 +106,7 @@ header {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 30%;
-  background-color: #BC2525;
+  height: 12em;
 }
 #findCities {
   font-size: 14px;
@@ -70,150 +121,158 @@ header {
 #country{
   width: 100%;
   height: 3em;
-  padding: 10px;
-  box-sizing: border-box;
-  background: rgba(0,0,0,0.6);
-  border: 1px solid #fff;
-  border-radius: 10px;
-  color: #fff;
-  outline: none;
-  font-size: 14px;
 }
-#country,
-#locationField input{
-  margin-top: 5px;
-}
-/* For city search */
 #locationField {
   -webkit-box-flex: 1 1 190px;
   -ms-flex: 1 1 190px;
   flex: 1 1 190px;
   margin-top: 20px;
 }
+#country,
 #locationField input{
-  padding: 10px;
+  margin-top: 5px;
   box-sizing: border-box;
   background: rgba(0,0,0,0.6);
   border: 1px solid #fff;
   border-radius: 10px;
-  color: #fff;
   outline: none;
   font-size: 14px;
+  padding: 10px;
 }
 /* Radio buttons */
 #searchSelected {
   display: flex;
   flex-direction: column;
-  background-color: #7B7979;
   width: 100%;
 }
 #searchSelected label{
   text-align: center;
-  color: #fff;
   padding: 30px 10px;
   border-bottom: 1px solid #000;
+  flex-basis: 30%;
 }
-#searchSelected label:hover{
-  background-color: brown;
-  cursor: pointer;
+#searchSelected label:first-child{
+  border-top: 1px solid #000;
 }
 #searchSelected input {
-  position: absolute;
-  left: 10%;
+  position: inherit;
+  margin-right: 10px;
 }
-
-/************** google map places and results style **************/
-    #map {
-      height: 100%;
-      width: 100%;
-      margin: auto;
-    }
-    .results{
-      text-align: center;
-      font-size: 18px;
-      font-family: cursive;
-      font-weight: 400;
-      background-color: red;
-    }
-    table {
-      font-size: 12px;
-    }
-    #listing {
-      width: 100%;
-      height: 470px;
-      overflow: auto;
-      cursor: pointer;
-      overflow-x: hidden;
-      margin: auto;
-    }
-    #autocomplete {
-      width: 100%;
-    }
-    .placeIcon {
-      width: 20px;
-      height: 34px;
-      margin: 4px;
-    }
-    .placeIcon {
-      width: 24px;
-      height: 24px;
-    }
-    #resultsTable {
-      border-collapse: collapse;
-      width: 100%;
-    }
-    #rating {
-      font-size: 13px;
-      font-family: Arial Unicode MS;
-    }
-    .iw_table_row {
-      height: 18px;
-    }
-    .iw_attribute_name {
-      font-weight: bold;
-      text-align: right;
-    }
-    .iw_table_icon {
-      text-align: right;
-    }
+/*--------------------------------------------Map and Search results*/
+#map {
+  height: 80%;
+  width: 100%;
+  margin: auto;
+}
+.results{
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  font-family: cursive;
+  font-weight: 400;
+  margin: 0;
+  padding: 10px 5px;
+}
+#resultsTable {
+  font-size: 14px;
+}
+#results td {
+  padding: 0 10px;
+}
+#listing {
+  width: 100%;
+  height: 80%;
+  overflow: auto;
+  cursor: pointer;
+  overflow-x: hidden;
+  margin: auto;
+}
+#autocomplete {
+  width: 100%;
+}
+.placeIcon {
+  width: 20px;
+  height: 34px;
+  margin: 4px;
+}
+.placeIcon {
+  width: 24px;
+  height: 24px;
+  padding: 5px;
+}
+#resultsTable {
+  border-collapse: collapse;
+  width: 100%;
+}
+#rating {
+  font-size: 13px;
+  font-family: Arial Unicode MS;
+}
+.iw_table_row {
+  height: 18px;
+}
+.iw_attribute_name {
+  font-weight: bold;
+  text-align: right;
+}
+.iw_table_icon {
+  text-align: right;
+}
+tr {
+  line-height: 1.2em;
+}
+/*--------------------------------------------Footer*/
+#footer{
+ position: relative;
+ height: 50px;
+ margin: 0;
+}
+#footer span{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
 /*--------------------------------------------Media Queries*/
 @media(min-width: 992px) {
   body {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: auto;
   }
+  /* Search box wrapper and Select dropdown menu */
   .citySearch {
     display: flex;
     flex-direction: row;
     justify-content: center;
   }
-  #controls {
+  #controls,
+  #locationField {
     margin-top: 0;
   }
   #controls,
   #locationField {
   margin: 10px 5em;
   }
-  #locationField {
-    margin-top: 0;
-  }
   /* Radio buttons */
   #searchSelected {
-    display: flex;
     flex-direction: row;
-    justify-content: space-around;
   }
   #searchSelected label{
     padding: 30px;
     border-right: 1px solid #000;
-    flex-basis: 30%;
+    border-top: 1px solid #000;
   }
-  #searchSelected label:hover{
-    background-color: brown;
-    cursor: pointer;
+  #searchSelected label:last-child {
+    border-right: none;
   }
-  #searchSelected input {
-  position: inherit;
-  margin-right: 10px;
+  /* Map and Search Results*/
+  #map {
+    float: left;
+    width: 70%;
+    margin-left: 0;
+  }
+  #listing{
+    width: 30%;
   }
 }

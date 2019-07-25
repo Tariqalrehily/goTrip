@@ -236,7 +236,7 @@ function buildIWContent(place) {
   }
 
   // Assign a five-star rating, using a black star ('&#10029;')
-  // to indicate the rating the hotel has earned, and a white star ('&#10025;')
+  // to indicate the rating the pleace has earned, and a white star ('&#10025;')
   // for the rating points not achieved.
   if (place.rating) {
     var ratingHtml = '';
