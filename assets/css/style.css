@@ -99,11 +99,8 @@ header {
   font-family: fantasy;
 }
 
-<<<<<<< HEAD
 /*--------------------------------------------Search and Buttons*/
-=======
-/*--------------------------------------------search and buttons*/
->>>>>>> 422ea75a8d1a2bace6beb24ba3c707779b031083
+
 /* search box wrapper*/
 .citySearch {
   -webkit-box-align: center;
@@ -166,11 +163,9 @@ header {
   position: inherit;
   margin-right: 10px;
 }
-<<<<<<< HEAD
+
 /*--------------------------------------------Map and Search results*/
-=======
-/*--------------------------------------------Map*/
->>>>>>> 422ea75a8d1a2bace6beb24ba3c707779b031083
+
 #map {
   height: 80%;
   width: 100%;
@@ -278,10 +273,7 @@ tr {
   #searchSelected label:last-child {
     border-right: none;
   }
-<<<<<<< HEAD
   /* Map and Search Results*/
-=======
->>>>>>> 422ea75a8d1a2bace6beb24ba3c707779b031083
   #map {
     float: left;
     width: 70%;
