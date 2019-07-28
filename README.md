@@ -102,7 +102,7 @@ Browsers: I used google chrome and safari.
 
 ### Debugging:
 * I had an error when I Oops! Something went wrong. This page didn't load Google Maps correctly. See the JavaScript console for technical details.
-I had this problem when going live on github pages, the map had worked on my development site, so this was a surprise to me. According to Google Maps documentation for different error codes [here](https://developers.google.com/maps/documentation/javascript/error-messages#deverrorcodes) The above error code is described in the documentation as the current URL loading the Google Maps JavaScript API has not been added to the list of allowed referrers. Please check the referrer settings of your API key on the Google API Console. I solved this by regenerating a new key, however, this could also be fixed by adding the site URL to the API credentials website restrictions.
+I had this problem when going live on github pages, the map had worked on my development site, so this was a surprise to me. According to Google Maps documentation for different error codes [here](https://developers.google.com/maps/documentation/javascript/error-messages#deverrorcodes) The above error code is described in the documentation as the current URL loading the Google Maps JavaScript API has not been added to the list of allowed referrers. Please check the referrer settings of your API key on the Google API Console. I solved this by regenerating a new key in a new project on google console, however, this could also be fixed by adding the site URL to the API credentials website restrictions.
 
 * On screen < 992px, I have given the controls div margin top 16px, but on screen >= 992 I had problem where the two search bars divs (controls and locationField) had different margin top. By setting controls div to margin top to 0 on screen >= 992 problem it's solved.
 
@@ -138,6 +138,7 @@ $ git push -u origin master
 ```
 
 * After, I will do this to commit and push my projects changes and keep my GitHub repository up to date.
+* By using Github Pages which is designed to host my project pages from a Github repository, I published my site at [goTrip](https://tariqalrehily.github.io/goTrip/).
 
 ### From Github:
 * To run this one page app locally:
