@@ -60,14 +60,17 @@ More information about the place can be view by clicking directly to the drop ic
 Background was giving 100% width, and the logo was center by using flex box. By giving relative position to the background and absolute position ti the logo div, logo is responsive at the center of the background image cross all screen sizes. This was done by testing it on different screen sizes.
 
 ### Country search and City search:
-Two search bars, for the convince for the user, the first search bar on the left is a drop down menu, where the user can select some countries and if is not one of those countries user can select all. I implemented this by <select> tag in HTML 5, style it in CSS 3, and JavaScript function setAutocompleteCountry(), by using if and else condition, if the user selected all map will be zoom at 2 to show the user the world map, else, bring the map view to the selected country. In style.css I used flex box. After, on the right is the city search bar, user promoted to enter a city, this was done by using autocomplete, by creating the autocomplete object and associate it with the UI input control, also restrict the search to the default country, and to place type "cities". By using jQuery, on city bar change, the view port will scroll down to bing documentById to the element with the ID map by using offset() top.
+Two search bars, for the convince for the user, the first search bar on the left is a drop down menu, where the user can select some countries and if is not one of those countries user can select all. I implemented this by select tag in HTML 5, style it in CSS 3, and JavaScript function setAutocompleteCountry, by using if and else condition, if the user selected all map will be zoom at 2 to show the user the world map, else, bring the map view to the selected country. In style.css I used flex box. After, on the right is the city search bar, user promoted to enter a city, this was done by using autocomplete, by creating the autocomplete object and associate it with the UI input control, also restrict the search to the default country, and to place type "cities". By using jQuery, on city bar change, the view port will scroll down to bing documentById to the element with the ID map by using offset top.
 
 ### Type of search:
 1. Hotel (Places to stay - checked)
 2. Restaurant (Eating and Drinking)
 3. Museums (Things to Do).
 
-First option for the user to search is by hotels, this was done by radio button. Google search function in map.js file, will get the checked radio button to the types results, I used [document.querySelector('input[type = radio]:checked').value]
+First option for the user to search is by hotels, this was done by radio button. Google search function in map.js file, will get the checked radio button to the types results, I used
+```
+[document.querySelector('input[type = radio]:checked').value]
+```
 When the user enter a city and when the page scroll down to the map id element, hotels will be the results as the radio button is checked in html file.
 
 ### Map and Results:
@@ -110,7 +113,7 @@ I sent the live web page to some of my friends to have their feedback, they had 
 
 ### To Github:
 1. Create a new repository on GitHub. To avoid errors, I did not initialize the new repository with README, license, or gitignore files. I added these files after my project has been pushed to GitHub.
-2. Open Terminal on mac bookpro.
+2. Open Terminal on MacBook Pro.
 3. Change the current working directory to my local project.
 4. Initialize the local directory as a Git repository, by:
   ```
