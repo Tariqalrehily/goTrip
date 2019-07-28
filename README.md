@@ -28,7 +28,7 @@ Helping users to plan their next holidays. User will find two visible bars as so
 
 * Second page: Screen >= 992px (landscape Tablet and Desktop)
 
-[Wire hyperlink.] (https://github.com/Tariqalrehily/goTrip/blob/master/goTrip_Mockups.pdf)
+[Wireframe mockups](https://github.com/Tariqalrehily/goTrip/blob/master/goTrip_Mockups.pdf)
 
 ## Features:
 
