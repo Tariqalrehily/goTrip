@@ -80,20 +80,24 @@ function initMap() {
 
   // Create the autocomplete object and associate it with the UI input control.
   // Restrict the search to the default country, and to place type "cities".
-  autocomplete = new google.maps.places.Autocomplete(
-      /** @type {!HTMLInputElement} */ (
-          document.getElementById('autocomplete')), {
-        types: ['(cities)'],
-        componentRestrictions: countryRestrict
-      });
-  places = new google.maps.places.PlacesService(map);
+  function initAutoComplete() {
+    autocomplete = new google.maps.places.Autocomplete(
+        /** @type {!HTMLInputElement} */ (
+            document.getElementById('autocomplete')), {
+          types: ['(cities)'],
+          componentRestrictions: countryRestrict
+        });
+    places = new google.maps.places.PlacesService(map);
 
-  autocomplete.addListener('place_changed', onPlaceChanged);
+    autocomplete.addListener('place_changed', onPlaceChanged);
 
-  // Add a DOM event listener to react when the user selects a country.
-  document.getElementById('country').addEventListener(
-      'change', setAutocompleteCountry);
-}
+    // Add a DOM event listener to react when the user selects a country.
+    document.getElementById('country').addEventListener(
+        'change', setAutocompleteCountry);
+      }
+      initAutoComplete()
+  }
+
 
 // When the user selects a city, get the place details for the city and
 // zoom the map in on the city.
@@ -115,7 +119,9 @@ function search() {
     types: [document.querySelector('input[type = radio]:checked').value]
   };
 
-  places.nearbySearch(search, function(results, status) {
+  places.nearbySearch(search, createMarkers)
+}
+    function createMarkers(results, status) {
     if (status === google.maps.places.PlacesServiceStatus.OK) {
       clearResults();
       clearMarkers();
@@ -138,8 +144,8 @@ function search() {
         addResult(results[i], i);
       }
     }
-  });
-}
+  }
+
 
 function clearMarkers() {
   for (var i = 0; i < markers.length; i++) {
@@ -263,8 +269,12 @@ function buildIWContent(place) {
       fullUrl = website;
     }
     document.getElementById('iw-website-row').style.display = '';
-    document.getElementById('iw-website').textContent = website;
+    document.getElementById('iw-website').innerHTML  = '<b><a href="' + website +
+        '"target="_blank">' + website + '</a></b>';
   } else {
     document.getElementById('iw-website-row').style.display = 'none';
   }
 }
+$(document).ready(function() {
+    initMap();
+})
