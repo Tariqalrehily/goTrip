@@ -1,12 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700');
 
 /*--------------------------------------------Colors*/
-#logo h1,
-#logo p {
+#logo h1 {
   color: #664905;
 }
 #logo h1 {
   background-color: #fff;
+}
+#logo p {
+  color: #fff;
+  background-color: #664905;
+  font-weight: 400;
+  padding:  10px;
 }
 #country,
 #locationField input,
