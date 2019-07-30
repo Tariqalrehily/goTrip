@@ -87,7 +87,7 @@ showInfoWindow function is to display the place details, show the information in
 * Chrome Dev Tools: I used Chrome Tools to run test my code and debugging it. I had bug where I was calling google places API, error message(Oops! Something went wrong. This page didn’t load Google Maps correctly. See the JavaScript console for technical details.) as I had restrict the HTTP access to local server 127.0.0.1. I than added https://tariqalrehily.github.io/goTrip/
 also I had an Error message which was initMap is not a function.
 
-Browsers: I used google chrome, safari, Firefox, and Microsoft Edge.
+* Browsers: chrome, safari, Firefox, and Microsoft Edge.
 
 ### Devices Tested:
 * Galaxy s5
