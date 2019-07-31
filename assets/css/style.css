@@ -10,8 +10,6 @@
 #logo p {
   color: #fff;
   background-color: #664905;
-  font-weight: 400;
-  padding:  10px;
 }
 #country,
 #locationField input,
@@ -97,7 +95,9 @@ header {
 #logo p {
   font-weight: 400;
   font-size: 16px;
-  font-family: fantasy;
+  border-radius: 10px;
+  font-weight: 400;
+  padding: 10px 20px;
 }
 
 /*--------------------------------------------Search and Buttons*/
