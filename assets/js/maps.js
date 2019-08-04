@@ -66,8 +66,8 @@ var countries = {
 
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
-    zoom: countries['ie'].zoom,
-    center: countries['ie'].center,
+    zoom: countries(country.ie).zoom,
+    center: countries(country.ie).center,
     mapTypeControl: false,
     panControl: false,
     zoomControl: false,
@@ -95,7 +95,7 @@ function initMap() {
     document.getElementById('country').addEventListener(
         'change', setAutocompleteCountry);
       }
-      initAutoComplete()
+      initAutoComplete();
   }
 
 
@@ -119,7 +119,7 @@ function search() {
     types: [document.querySelector('input[type = radio]:checked').value]
   };
 
-  places.nearbySearch(search, createMarkers)
+  places.nearbySearch(search, createMarkers);
 }
     function createMarkers(results, status) {
     if (status === google.maps.places.PlacesServiceStatus.OK) {
@@ -277,4 +277,4 @@ function buildIWContent(place) {
 }
 $(document).ready(function() {
     initMap();
-})
+});
