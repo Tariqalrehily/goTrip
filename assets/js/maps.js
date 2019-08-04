@@ -66,8 +66,8 @@ var countries = {
 
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
-    zoom: countries(country.ie).zoom,
-    center: countries(country.ie).center,
+    zoom: (countries.ie).zoom,
+    center: (countries.ie).center,
     mapTypeControl: false,
     panControl: false,
     zoomControl: false,
