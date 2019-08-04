@@ -82,9 +82,9 @@ showInfoWindow function is to display the place details, show the information in
 
 * CSS: No Error Found.
 
-* Javascript: 
+* Javascript:
 1. Map.js file:  I used jshint.com I found 5 warning, and I have fixed them accordingly,
-using dot notation instead of square-bracket notation, (country.ie) instead of ['ie']. Some Missing semicolon in line 98, 122, and 280.
+using dot notation instead of square-bracket notation, (countries.ie) instead of ['ie']. Some Missing semicolon in line 98, 122, and 280.
 
 2. animate.js file: I found 1 waning which was missing semicolon in line 8.
 
