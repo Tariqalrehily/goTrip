@@ -82,6 +82,12 @@ showInfoWindow function is to display the place details, show the information in
 
 * CSS: No Error Found.
 
+* Javascript: 
+1. Map.js file:  I used jshint.com I found 5 warning, and I have fixed them accordingly,
+using dot notation instead of square-bracket notation, (country.ie) instead of ['ie']. Some Missing semicolon in line 98, 122, and 280.
+
+2. animate.js file: I found 1 waning which was missing semicolon in line 8.
+
 * Atom: I used Atom as code editor for macOS, by using atom live server package, I had live view on my application progression, Local Server: http://127.0.0.1:3000/
 
 * Chrome Dev Tools: I used Chrome Tools to run test my code and debugging it. I had bug where I was calling google places API, error message(Oops! Something went wrong. This page didn’t load Google Maps correctly. See the JavaScript console for technical details.) as I had restrict the HTTP access to local server 127.0.0.1. I than added https://tariqalrehily.github.io/goTrip/
