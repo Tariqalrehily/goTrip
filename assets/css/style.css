@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700');
-
 /*--------------------------------------------Colors*/
 #logo h1 {
   color: #664905;
@@ -43,7 +42,6 @@ tr {
 #footer {
   background-color: #284F87;
 }
-
 /*--------------------------------------------Hover*/
 #searchSelected label:hover{
   background-color: #1F2A39;
@@ -99,7 +97,6 @@ header {
   font-weight: 400;
   padding: 10px 20px;
 }
-
 /*--------------------------------------------Search and Buttons*/
 /* search box wrapper*/
 .citySearch {

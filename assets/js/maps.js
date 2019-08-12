@@ -4,7 +4,6 @@ var autocomplete;
 var countryRestrict = {'country': 'ie'};
 var MARKER_PATH = 'https://developers.google.com/maps/documentation/javascript/images/marker_green';
 var hostnameRegexp = new RegExp('^https?://.+?/');
-
 var countries = {
   'au': {
     center: {lat: -25.3, lng: 133.8},
@@ -98,7 +97,6 @@ function initMap() {
       initAutoComplete();
   }
 
-
 // When the user selects a city, get the place details for the city and
 // zoom the map in on the city.
 function onPlaceChanged() {
@@ -118,34 +116,32 @@ function search() {
     bounds: map.getBounds(),
     types: [document.querySelector('input[type = radio]:checked').value]
   };
-
   places.nearbySearch(search, createMarkers);
 }
-    function createMarkers(results, status) {
-    if (status === google.maps.places.PlacesServiceStatus.OK) {
-      clearResults();
-      clearMarkers();
-      // Create a marker for each search found, and
-      // assign a letter of the alphabetic to each marker icon.
-      for (var i = 0; i < results.length; i++) {
-        var markerLetter = String.fromCharCode('A'.charCodeAt(0) + (i % 26));
-        var markerIcon = MARKER_PATH + markerLetter + '.png';
-        // Use marker animation to drop the icons incrementally on the map.
-        markers[i] = new google.maps.Marker({
-          position: results[i].geometry.location,
-          animation: google.maps.Animation.DROP,
-          icon: markerIcon
-        });
-        // If the user clicks a search marker, show the details of that selected search
-        // in an info window.
-        markers[i].placeResult = results[i];
-        google.maps.event.addListener(markers[i], 'click', showInfoWindow);
-        setTimeout(dropMarker(i), i * 100);
-        addResult(results[i], i);
-      }
+function createMarkers(results, status) {
+  if (status === google.maps.places.PlacesServiceStatus.OK) {
+    clearResults();
+    clearMarkers();
+    // Create a marker for each search found, and
+    // assign a letter of the alphabetic to each marker icon.
+    for (var i = 0; i < results.length; i++) {
+      var markerLetter = String.fromCharCode('A'.charCodeAt(0) + (i % 26));
+      var markerIcon = MARKER_PATH + markerLetter + '.png';
+      // Use marker animation to drop the icons incrementally on the map.
+      markers[i] = new google.maps.Marker({
+        position: results[i].geometry.location,
+        animation: google.maps.Animation.DROP,
+        icon: markerIcon
+      });
+      // If the user clicks a search marker, show the details of that selected search
+      // in an info window.
+      markers[i].placeResult = results[i];
+      google.maps.event.addListener(markers[i], 'click', showInfoWindow);
+      setTimeout(dropMarker(i), i * 100);
+      addResult(results[i], i);
     }
   }
-
+}
 
 function clearMarkers() {
   for (var i = 0; i < markers.length; i++) {
