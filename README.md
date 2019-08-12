@@ -36,7 +36,7 @@ I used Sketch software for Wireframe mockups, as follow:
 
 * The primary feature of this one-page application, is using google map places API. The map is set on Ireland as default country for search, user can select other countries for their interest from the drop-down menu or all if the country is not in the drop-down menu. Countries which are available in the drop-down menu are Australia, Brazil, France, Germany, Mexico, New Zealand, Italy, South Africa, Spain, Portugal, USA, United Kingdom, and Ireland. After the user selects the country, the Map view will be zoomed to that county, and then the user can enter a city from the selected country, to start exploring.
 
-* Using jQuery, when the user fills city bar search, the page scroll down to map viewport, and the user can start exploring by selecting one of the three radio buttons option (hotels, restaurants, and museums).
+* Using jQuery, when the user fills city bar search, the page scroll down to map viewport, and the user can start exploring by selecting one of the three radio buttons option (Places to Stay! (hotels), Eating & Drinking! (restaurants), and Things to Do! (museums)).
 
 * On clicking on one the three options, drop icons will show the users many places around the city on the map, also the places names are set in the table under or beside the map, depends on the user screen size.
 
@@ -52,15 +52,15 @@ I used Sketch software for Wireframe mockups, as follow:
 * CSS3
 * Javascript
 * jQuery
-* google map places API
+* Google map places API
 
 ## Testing
 
 ### Full width background and Logo:
-Background was giving 100% width, and the logo was center by using flexbox. By giving relative position to the background and absolute position to the logo div, logo is responsive at the center of the background image across all screen sizes. This was done by testing it on different screen sizes. Below the logo, a paragraph describe to the user to find next destination and start exploring.
+Background was giving 100% width, and the logo was center by using flex box. By giving relative position to the background and absolute position to the logo div, logo is responsive at the center of the background image across all screen sizes. This was done by testing it on different screen sizes. Below the logo, a paragraph describe to the user to find next destination and start exploring.
 
 ### Country search and City search:
-Two search bars, for the user, convince, the first search bar on the left is a drop-down menu, where the user can select some countries and if is not one of those countries user can select all. I implemented this by select tag in HTML 5, style it in CSS 3, and JavaScript function setAutocompleteCountry, by using if and else condition, if the user selected all map will be zoom at 2 to show the user the world map, else, bring the map view to the selected country at zoom of 15. In style.css I used flex box to center for small screens and side​ on larger screens. After, on the right is the city search bar, user promoted to enter a city, this was done by using onPlaceChanged function, if the city has geometry bring it the map view and call the search function on it, also restrict the search to the default country, and to place type "cities". By using jQuery, on city bar change, the view port will scroll down to bing documentById to the element with the ID map by using offset top.
+Two search bars, for the user convince, the first search bar on the left is a drop-down menu, where the user can select some countries and if is not one of those countries user can select all. I implemented this by select tag in HTML 5, style it in CSS 3, and JavaScript function setAutocompleteCountry, by using if and else condition, if the user selected all map will be zoom at 2 to show the user the world map, else, bring the map view to the selected country at zoom of 15. In style.css file, I used flex box to center for small screens and side​ on larger screens. After, on the right is the city search bar, user promoted to enter a city, this was done by using onPlaceChanged function, if the city has geometry bring it the map view and call the search function on it, also restrict the search to the default country, and to place type "cities". By using jQuery, on city bar change, the view port will scroll down to bing documentById to the element with the ID map by using offset top.
 
 ### Type of search:
 1. Hotel (Places to stay - checked)
@@ -83,17 +83,17 @@ showInfoWindow function is to display the place details, show the information in
 * CSS: No Error Found.
 
 * Javascript:
-1. Map.js file:  I used jshint.com I found 5 warning, and I have fixed them accordingly,
+1. Map.js file:  I used jshint.com I found 5 warnings, and I have fixed them accordingly,
 using dot notation instead of square-bracket notation, (countries.ie) instead of ['ie']. Some Missing semicolon in line 98, 122, and 280.
 
-2. animate.js file: I found 1 waning which was missing semicolon in line 8.
+2. animate.js file: I found 1 warning which was missing semicolon in line 8.
 
 * Atom: I used Atom as code editor for macOS, by using atom live server package, I had live view on my application progression, Local Server: http://127.0.0.1:3000/
 
 * Chrome Dev Tools: I used Chrome Tools to run test my code and debugging it. I had bug where I was calling google places API, error message(Oops! Something went wrong. This page didn’t load Google Maps correctly. See the JavaScript console for technical details.) as I had restrict the HTTP access to local server 127.0.0.1. I than added https://tariqalrehily.github.io/goTrip/
 also I had an Error message which was initMap is not a function.
 
-* Browsers: chrome, safari, Firefox, and Microsoft Edge.
+* Browsers: Chrome, Safari, Firefox, and Microsoft Edge.
 
 ### Devices Tested:
 * Galaxy s5
@@ -167,10 +167,10 @@ $ git push -u origin master
 1. Center content (e.g logo, footer): from [W3.org](https://www.w3.org/Style/Examples/007/center.en.html)
 2. Picking colors values: from [htmlcolorcodes.com](https://htmlcolorcodes.com/color-picker/)
 3. Google Map Api error solution: by referring to [stackoverflow.com](https://stackoverflow.com/questions/2769148/whats-the-api-key-for-in-google-maps-api-v3)
+4. Google Map Places Api [documentation link](https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-hotelsearch)
 
 ## Media:
 1. Background image: from Pexels.com by [Pixabay](https://www.pexels.com/photo/scenic-view-of-beach-248797/)
-2. code: [Google Documentation](https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-hotelsearch)
 
 ## Acknowledgement:
 * To my mentor Anthony Ngene provided me guides and with useful links such as using [Trello](https://trello.com/b/E5MA5w4f/gotrip) to manage the project flow.
