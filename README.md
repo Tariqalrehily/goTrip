@@ -115,6 +115,8 @@ I had this problem when going live on GitHub pages, the map had worked on my dev
 
 * On-screen < 992px, I have given the controls div margin-top 16px, but on-screen >= 992 I had a problem where the two search bars divs (controls and locationField) had different margin-top. By setting controls div to margin-top to 0 on-screen >= 992 I solved it.
 
+* One Warning (jQuery.Deferred exception: google is not defined ReferenceError: google is not defined) and Error which Occasionally happens (Uncaught ReferenceError: google is not defined) may can be internet speed as the API be loaded after the document has finished loading, I'm loading it asynchronous. 
+
 ### User Tests:
 I sent the live web page to some of my friends to have their feedback, they had no major feedback to implement.
 
